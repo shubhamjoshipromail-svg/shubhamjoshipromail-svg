@@ -13,19 +13,19 @@
 
 ---
 
-## The fast lane — four systems
+## The fast lane: four systems
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### ⚙️ Govern — AgentDock
+### ⚙️ Govern: AgentDock
 
 A control plane where multi-agent Flows execute <b>real MCP tools</b> behind deny-by-default policy gates, approval workflows, and budget caps.
 
-<b>Why it matters:</b> agents that act in the real world need governance, not vibes. An agent here can draft your email — sending is <i>always</i> approval-gated.
+<b>Why it matters:</b> agents that act in the real world need governance, not vibes. An agent here can draft your email. Sending is <i>always</i> approval-gated.
 
-<b>Proof:</b> durable Postgres job queue with crash recovery and idempotent external actions — a retried step never double-fires.
+<b>Proof:</b> a durable Postgres job queue provides crash recovery, while idempotent external actions ensure a retried step never double-fires.
 
 <i>TypeScript · Next.js · Prisma · Postgres + pgvector · official MCP SDK · Vitest</i>
 
@@ -34,11 +34,11 @@ A control plane where multi-agent Flows execute <b>real MCP tools</b> behind den
 </td>
 <td width="50%" valign="top">
 
-### 💊 Explain — RxCheck
+### 💊 Explain: RxCheck
 
 A pharmacist-facing drug-interaction reviewer over <b>152,416 records</b>, built on one hard boundary: <b>the database decides; the LLM only explains.</b>
 
-<b>Why it matters:</b> in clinical decision support, hallucination is not a UX bug — so detection is deterministic, and the model is a bounded explanation layer.
+<b>Why it matters:</b> in clinical decision support, hallucination is not a UX bug. Detection is deterministic, and the model is a bounded explanation layer.
 
 <b>Proof:</b> 26/26-scenario reproducible evaluation; RxNorm normalization; acknowledgment/override audit trails.
 
@@ -51,9 +51,9 @@ A pharmacist-facing drug-interaction reviewer over <b>152,416 records</b>, built
 <tr>
 <td width="50%" valign="top">
 
-### 🎈 Assist — Nimbus
+### 🎈 Assist: Nimbus
 
-A privacy-first AI companion that catches student burnout early — and <b>acts</b>: blocks calendar time, drafts the avoided email, guides breathing, surfaces help.
+A privacy-first AI companion that catches student burnout early and <b>acts</b>: blocks calendar time, drafts the avoided email, guides breathing, and surfaces help.
 
 <b>Why it matters:</b> action beats advice for someone too fried to act. 9 grounded tools read real context before every reply.
 
@@ -66,7 +66,7 @@ A privacy-first AI companion that catches student burnout early — and <b>acts<
 </td>
 <td width="50%" valign="top">
 
-### 🍳 Create — FridgeChef
+### 🍳 Create: FridgeChef
 
 A consumer AI cooking product: fridge photos and receipts become structured inventory, then <b>real-time streaming recipes</b>.
 
@@ -87,7 +87,7 @@ A consumer AI cooking product: fridge photos and receipts become structured inve
 1. <b>Deterministic systems decide; models explain.</b> RxCheck&#39;s detection core never asks an LLM whether an interaction exists.
 2. <b>Humans keep the pen on consequential actions.</b> In AgentDock there is no grant configuration under which an outbound send auto-fires.
 3. <b>Evaluation is part of the product.</b> OpsPilot&#39;s unstable DeBERTa runs were excluded rather than reported; RxCheck ships a 26-scenario eval you can rerun.
-4. <b>The bottleneck is usually the data.</b> OpsPilot went ~52% → ~73% by redesigning a noisy 10-label taxonomy into 7 operational families — not by using a bigger model.
+4. <b>The bottleneck is usually the data.</b> OpsPilot went ~52% → ~73% by redesigning a noisy 10-label taxonomy into 7 operational families instead of using a bigger model.
 5. <b>Business value and technical correctness belong together.</b> My ACHP capstone turned OLS + HC3 robust errors into national policy advocacy material.
 
 ## Tech, with receipts
@@ -107,11 +107,11 @@ AgentDock&#39;s execution layer: Postgres-backed job queue with lease/heartbeat 
 </details>
 
 <details><summary><b>💊 Healthcare AI &amp; responsible boundaries</b></summary><br/>
-RxCheck imports 152,416 interactions (172,714 source assertions, 1,967 drugs) with exact → brand → fuzzy → NDC RxNorm resolution and an unresolved-record queue. Findings carry acknowledgment and override workflows with audit events. The 26-scenario formative evaluation proves core checking completes even when every external service (LLM, OpenFDA, RxNorm) fails. It is a research prototype and says so honestly — that boundary discipline is the point.
+RxCheck imports 152,416 interactions (172,714 source assertions, 1,967 drugs) with exact → brand → fuzzy → NDC RxNorm resolution and an unresolved-record queue. Findings carry acknowledgment and override workflows with audit events. The 26-scenario formative evaluation proves core checking completes even when every external service (LLM, OpenFDA, RxNorm) fails. It is a research prototype and says so honestly. That boundary discipline is the point.
 </details>
 
 <details><summary><b>🎫 Applied NLP: the OpsPilot story</b></summary><br/>
-Baselines first: TF-IDF + logistic regression ~44%, CNN ~52%, ModernBERT on the original taxonomy ~52% — which meant the labels were the problem. Redesigned 10 overlapping classes into 7 routing families (~24k leakage-safe examples, fixed splits): 73.1% accuracy, weighted-F1 0.713. Confidence gating at 0.80 auto-routes 62.3% of tickets at 85.5% accuracy; the rest escalate to humans. Model deployed to <a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Hugging Face</a>.
+Baselines first: TF-IDF + logistic regression ~44%, CNN ~52%, and ModernBERT on the original taxonomy ~52%. The results showed that the labels were the problem. Redesigning 10 overlapping classes into 7 routing families (~24k leakage-safe examples, fixed splits) produced 73.1% accuracy and weighted-F1 0.713. Confidence gating at 0.80 auto-routes 62.3% of tickets at 85.5% accuracy; the rest escalate to humans. The model is deployed to <a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Hugging Face</a>.
 </details>
 
 <details><summary><b>📊 Analytics &amp; experiments</b></summary><br/>
@@ -120,7 +120,7 @@ CMS / ACHP capstone (top-3 team school-wide, presented to the client): merged fo
 
 ## Beyond the code
 
-I co-founded and lead <b>BAAIO</b> (~100 members), the student AI organization at Johns Hopkins Carey — hands-on workshops, a buildathon, and <b>Brain Bank</b>, our weekly deep-dive on advanced AI &#215; business. Before AI: I ran a web &amp; marketing studio in Japan and taught English — four working languages (English, Japanese, Nepali, Hindi) and a habit of making complex things approachable.
+I co-founded and lead <b>BAAIO</b> (~100 members), the student AI organization at Johns Hopkins Carey. We run hands-on workshops, a buildathon, and <b>Brain Bank</b>, our weekly deep-dive on advanced AI &#215; business. Before AI, I ran a web &amp; marketing studio in Japan and taught English. I work in four languages (English, Japanese, Nepali, Hindi) and have a habit of making complex things approachable.
 
 Currently exploring: eval harnesses for agent systems, and what forward-deployed AI engineering should look like in regulated industries.
 
