@@ -4,10 +4,14 @@
       <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
     </filter>
     <clipPath id="wipe1"><rect x="40" y="96" width="0" height="70">
-      <animate attributeName="width" from="0" to="880" dur="0.85s" begin="0.15s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1" keyTimes="0;1" values="0;880"/>
+      <animate attributeName="width" dur="6s" begin="0s" repeatCount="indefinite" calcMode="discrete"
+        keyTimes="0;.058;.066;.074;.082;.090;.098;.106;.114;.122;.130;.138;.146;.154;.162;.170;.178;.186;.194;.202;.210;.218;.225;.92;1"
+        values="0;0;30;59;89;118;148;177;207;236;266;295;325;354;384;413;443;472;502;531;561;590;620;620;0"/>
     </rect></clipPath>
     <clipPath id="wipe2"><rect x="40" y="166" width="0" height="70">
-      <animate attributeName="width" from="0" to="880" dur="0.85s" begin="0.34s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1" keyTimes="0;1" values="0;880"/>
+      <animate attributeName="width" dur="6s" begin="0s" repeatCount="indefinite" calcMode="discrete"
+        keyTimes="0;.235;.243;.251;.259;.267;.275;.283;.291;.299;.307;.315;.323;.331;.339;.347;.355;.363;.368;.92;1"
+        values="0;0;24;48;72;96;120;144;168;192;216;240;264;288;312;336;360;384;408;408;0"/>
     </rect></clipPath>
   </defs>
 
@@ -38,10 +42,21 @@
     <text x="40" y="216" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="64" font-weight="600" letter-spacing="-3.2">into working AI.</text>
   </g>
 
-  <!-- caret -->
-  <rect x="588" y="176" width="5" height="46" fill="#e44b27" opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="0.01s" begin="1.2s" fill="freeze"/>
-    <animate attributeName="opacity" values="1;1;0;0;1" dur="1.5s" begin="1.5s" repeatCount="indefinite"/>
+  <!-- caret follows the typewriter instead of waiting at the side -->
+  <rect x="40" y="106" width="5" height="46" fill="#e44b27">
+    <animate attributeName="x" dur="6s" begin="0s" repeatCount="indefinite" calcMode="discrete"
+      keyTimes="0;.058;.066;.074;.082;.090;.098;.106;.114;.122;.130;.138;.146;.154;.162;.170;.178;.186;.194;.202;.210;.218;.225;1"
+      values="40;40;70;99;129;158;188;217;247;276;306;335;365;394;424;453;483;512;542;571;601;630;660;660"/>
+    <animate attributeName="opacity" dur="6s" begin="0s" repeatCount="indefinite" calcMode="discrete"
+      keyTimes="0;.058;.225;1" values="0;1;0;0"/>
+  </rect>
+  <rect x="40" y="176" width="5" height="46" fill="#e44b27">
+    <animate attributeName="x" dur="6s" begin="0s" repeatCount="indefinite" calcMode="discrete"
+      keyTimes="0;.235;.243;.251;.259;.267;.275;.283;.291;.299;.307;.315;.323;.331;.339;.347;.355;.363;.368;1"
+      values="40;40;64;88;112;136;160;184;208;232;256;280;304;328;352;376;400;424;448;448"/>
+    <animate attributeName="opacity" dur="6s" begin="0s" repeatCount="indefinite" calcMode="discrete"
+      keyTimes="0;.235;.368;.435;.50;.565;.63;.695;.76;.825;.89;.92;1"
+      values="0;1;1;0;1;0;1;0;1;0;1;0;0"/>
   </rect>
 
   <!-- serif deck -->
