@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 280" width="940" height="280" role="img" aria-label="Vibe Curator. An AI native creative environment where generated media stays editable. Source images from OpenAI, treatment shaders from Anthropic, motion from Gemini Veo, sound from ElevenLabs.">
+  <defs>
+    <radialGradient id="orbA" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="18%" stop-color="#15a6ff"/>
+      <stop offset="52%" stop-color="#5032db"/>
+      <stop offset="72%" stop-color="#5032db" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbB" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ffe8a3"/>
+      <stop offset="23%" stop-color="#ff5b28"/>
+      <stop offset="56%" stop-color="#b6008a"/>
+      <stop offset="73%" stop-color="#b6008a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fade" cx="50%" cy="50%" r="52%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="gridMask"><rect width="940" height="280" fill="url(#fade)"/></mask>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0 V34 M0 34 H34" stroke="#75ccff" stroke-opacity="0.14" stroke-width="1" fill="none"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <linearGradient id="scrimTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080d18" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#080d18" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrimBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080d18" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#080d18" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#080d18" stop-opacity="0.95"/>
+    </linearGradient>
+    <clipPath id="frame"><rect x="0" y="0" width="940" height="280"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="940" height="280" fill="#080d18"/>
+
+    <g mask="url(#gridMask)" transform="rotate(12 470 140) scale(1.4) translate(-134 -40)">
+      <rect x="-200" y="-200" width="1400" height="800" fill="url(#grid)"/>
+    </g>
+
+    <g style="mix-blend-mode:screen">
+      <ellipse cx="215" cy="112" rx="165" ry="165" fill="url(#orbA)" filter="url(#soft)" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 18 -13; 0 0" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+      </ellipse>
+      <ellipse cx="742" cy="196" rx="120" ry="120" fill="url(#orbB)" filter="url(#soft)" opacity="0.92">
+        <animateTransform attributeName="transform" type="translate" values="0 0; -16 12; 0 0" dur="9s" begin="-3s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" keyTimes="0;0.5;1"/>
+      </ellipse>
+    </g>
+
+    <!-- compositor sweep -->
+    <rect x="0" y="0" width="1.5" height="280" fill="#75ccff" opacity="0.5">
+      <animate attributeName="x" values="-20;960" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1" keyTimes="0;1"/>
+    </rect>
+
+    <rect x="0" y="0" width="940" height="62" fill="url(#scrimTop)"/>
+    <rect x="0" y="150" width="940" height="130" fill="url(#scrimBottom)"/>
+
+    <text x="26" y="40" fill="#bbdbea" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.6">04 / GENERATIVE PRODUCT</text>
+    <text x="914" y="40" text-anchor="end" fill="#bbdbea" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.6">PERSONAL PROJECT / 2026</text>
+
+    <text x="26" y="146" fill="#ffffff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="62" font-weight="600" letter-spacing="-3">Vibe Curator</text>
+    <text x="28" y="180" fill="#d8ecf7" font-family="Georgia, Times New Roman, serif" font-size="19" font-weight="500">Generated media that stays editable instead of ending as a flattened file.</text>
+
+    <!-- provider pipeline -->
+    <path d="M26 214 H914" stroke="#75ccff" stroke-opacity="0.3" stroke-width="1"/>
+    <g font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="1.2">
+      <text x="26"  y="238" fill="#7fa8bd">SOURCE</text>
+      <text x="248" y="238" fill="#7fa8bd">TREATMENT</text>
+      <text x="470" y="238" fill="#7fa8bd">MOTION</text>
+      <text x="692" y="238" fill="#7fa8bd">SOUND</text>
+    </g>
+    <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">
+      <text x="26"  y="258">OpenAI images</text>
+      <text x="248" y="258">Guarded GLSL, Anthropic</text>
+      <text x="470" y="258">Gemini Veo</text>
+      <text x="692" y="258">ElevenLabs</text>
+    </g>
+    <g fill="#75ccff">
+      <circle cx="232" cy="234" r="2.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="4s" begin="0s"   repeatCount="indefinite"/></circle>
+      <circle cx="454" cy="234" r="2.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="4s" begin="1s"   repeatCount="indefinite"/></circle>
+      <circle cx="676" cy="234" r="2.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="4s" begin="2s"   repeatCount="indefinite"/></circle>
+      <circle cx="898" cy="234" r="2.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="4s" begin="3s"   repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="939" height="279" fill="none" stroke="#11120f"/>
+</svg>

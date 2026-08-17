@@ -1,71 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 310" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Shubham Joshi. Applied AI, Data Science, AI Product. Four systems: Govern with AgentDock, Explain with RxCheck, Assist with Nimbus, Create with FridgeChef.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 396" width="940" height="396" role="img" aria-label="Shubham Joshi. Applied AI and forward deployed engineer. I turn messy problems into working AI. 225 commits in AgentDock, 73.1 percent ModernBERT validation accuracy, 138,263 rows in the ACHP master dataset, 4 AI providers in Vibe Curator.">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0c1424"/>
-      <stop offset="1" stop-color="#122036"/>
-    </linearGradient>
-    <radialGradient id="pulse">
-      <stop offset="0" stop-color="#ffb454" stop-opacity="0.5"/>
-      <stop offset="1" stop-color="#ffb454" stop-opacity="0"/>
-    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+    </filter>
+    <clipPath id="wipe1"><rect x="40" y="96" width="0" height="70">
+      <animate attributeName="width" from="0" to="880" dur="0.85s" begin="0.15s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1" keyTimes="0;1" values="0;880"/>
+    </rect></clipPath>
+    <clipPath id="wipe2"><rect x="40" y="166" width="0" height="70">
+      <animate attributeName="width" from="0" to="880" dur="0.85s" begin="0.34s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1" keyTimes="0;1" values="0;880"/>
+    </rect></clipPath>
   </defs>
-  <rect width="940" height="310" rx="18" fill="url(#bg)"/>
-  <g stroke="#1a2b49" stroke-width="1">
-    <path d="M0 250 H940" opacity="0.6"/>
-    <path d="M0 170 H940" opacity="0.4"/>
-    <path d="M120 0 V310" opacity="0.3"/>
-    <path d="M470 0 V310" opacity="0.3"/>
-    <path d="M820 0 V310" opacity="0.3"/>
+
+  <rect width="940" height="396" fill="#f3f0e8"/>
+
+  <!-- scroll progress rail, mirrors .progress from the site -->
+  <rect x="0" y="0" width="0" height="3" fill="#e44b27">
+    <animate attributeName="width" from="0" to="940" dur="2.4s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.22 1 0.36 1" keyTimes="0;1" values="0;940"/>
+  </rect>
+
+  <!-- masthead -->
+  <rect x="40" y="30" width="26" height="26" fill="#11120f"/>
+  <text x="53" y="48" text-anchor="middle" fill="#f3f0e8" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="500">SJ</text>
+  <text x="78" y="48" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="15" font-weight="650" letter-spacing="-0.2">Shubham Joshi</text>
+  <text x="900" y="48" text-anchor="end" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.5">SAN FRANCISCO / 2026</text>
+  <path d="M40 68 H900" stroke="#11120f" stroke-width="1"/>
+
+  <!-- role kicker -->
+  <text x="40" y="88" fill="#e44b27" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="500" letter-spacing="1.6" opacity="0">APPLIED AI + FORWARD DEPLOYED ENGINEER
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.05s" fill="freeze"/>
+  </text>
+
+  <!-- headline -->
+  <g clip-path="url(#wipe1)">
+    <text x="40" y="148" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="64" font-weight="600" letter-spacing="-3.2">I turn messy problems</text>
   </g>
-  <text x="470" y="74" text-anchor="middle" fill="#f4f7fd" font-size="36" font-weight="700" letter-spacing="7">SHUBHAM JOSHI</text>
-  <text x="470" y="104" text-anchor="middle" fill="#8da3c9" font-size="14" letter-spacing="4">APPLIED AI &#183; DATA SCIENCE &#183; AI PRODUCT</text>
-  <text x="470" y="132" text-anchor="middle" fill="#c8d4ea" font-size="14" font-style="italic">&#8220;I build AI systems people can understand, control, evaluate, and actually use.&#8221;</text>
-  <path d="M170 218 H770" stroke="#2b3d63" stroke-width="2"/>
-  <circle r="4.5" fill="#5fd4e6">
-    <animateMotion dur="7s" repeatCount="indefinite" path="M170 218 H770"/>
+  <g clip-path="url(#wipe2)">
+    <text x="40" y="216" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="64" font-weight="600" letter-spacing="-3.2">into working AI.</text>
+  </g>
+
+  <!-- caret -->
+  <rect x="588" y="176" width="5" height="46" fill="#e44b27" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.01s" begin="1.2s" fill="freeze"/>
+    <animate attributeName="opacity" values="1;1;0;0;1" dur="1.5s" begin="1.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- serif deck -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="0.85s" fill="freeze"/>
+    <text x="40" y="258" fill="#11120f" font-family="Georgia, Times New Roman, serif" font-size="19" font-weight="500">Agents, trained models, data pipelines, and products</text>
+    <text x="40" y="282" fill="#11120f" font-family="Georgia, Times New Roman, serif" font-size="19" font-weight="500">built from first question to deployed system.</text>
+  </g>
+
+  <!-- proof rail -->
+  <path d="M40 306 H900" stroke="#11120f" stroke-width="1"/>
+  <path d="M40 372 H900" stroke="#11120f" stroke-width="1"/>
+  <g stroke="#c9c6bb" stroke-width="1">
+    <path d="M255 306 V372"/><path d="M470 306 V372"/><path d="M685 306 V372"/>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.05s" fill="freeze"/>
+    <text x="40" y="340" fill="#11120f" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" font-weight="500">225</text>
+    <text x="40" y="357" fill="#66665e" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11">commits in AgentDock</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.2s" fill="freeze"/>
+    <text x="273" y="340" fill="#11120f" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" font-weight="500">73.1%</text>
+    <text x="273" y="357" fill="#66665e" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11">ModernBERT validation accuracy</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.35s" fill="freeze"/>
+    <text x="488" y="340" fill="#11120f" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" font-weight="500">138,263</text>
+    <text x="488" y="357" fill="#66665e" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11">rows in the ACHP master dataset</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.5s" fill="freeze"/>
+    <text x="703" y="340" fill="#11120f" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="27" font-weight="500">4</text>
+    <text x="703" y="357" fill="#66665e" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="11">AI providers in Vibe Curator</text>
+  </g>
+
+  <!-- travelling signal marker on the closing rule -->
+  <circle cy="372" r="3.5" fill="#e44b27">
+    <animate attributeName="cx" values="40;900;40" dur="9s" begin="1.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1" keyTimes="0;0.5;1"/>
   </circle>
 
-  <g text-anchor="middle">
-    <circle cx="170" cy="218" r="34" fill="url(#pulse)" opacity="0.5">
-      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" begin="0s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="170" cy="218" r="17" fill="#16233d" stroke="#ffb454" stroke-width="2"/>
-    <circle cx="170" cy="218" r="5" fill="#ffb454"/>
-    <text x="170" y="186" fill="#ffb454" font-size="12" font-weight="700" letter-spacing="3">GOVERN</text>
-    <text x="170" y="261" fill="#e8eefb" font-size="14" font-weight="600">AgentDock</text>
-    <text x="170" y="279" fill="#7d92b8" font-size="11">multi-agent control plane</text>
-  </g>
-
-  <g text-anchor="middle">
-    <circle cx="370" cy="218" r="34" fill="url(#pulse)" opacity="0.5">
-      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" begin="1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="370" cy="218" r="17" fill="#16233d" stroke="#ffb454" stroke-width="2"/>
-    <circle cx="370" cy="218" r="5" fill="#ffb454"/>
-    <text x="370" y="186" fill="#ffb454" font-size="12" font-weight="700" letter-spacing="3">EXPLAIN</text>
-    <text x="370" y="261" fill="#e8eefb" font-size="14" font-weight="600">RxCheck</text>
-    <text x="370" y="279" fill="#7d92b8" font-size="11">clinical decision support</text>
-  </g>
-
-  <g text-anchor="middle">
-    <circle cx="570" cy="218" r="34" fill="url(#pulse)" opacity="0.5">
-      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" begin="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="570" cy="218" r="17" fill="#16233d" stroke="#ffb454" stroke-width="2"/>
-    <circle cx="570" cy="218" r="5" fill="#ffb454"/>
-    <text x="570" y="186" fill="#ffb454" font-size="12" font-weight="700" letter-spacing="3">ASSIST</text>
-    <text x="570" y="261" fill="#e8eefb" font-size="14" font-weight="600">Nimbus</text>
-    <text x="570" y="279" fill="#7d92b8" font-size="11">burnout companion</text>
-  </g>
-
-  <g text-anchor="middle">
-    <circle cx="770" cy="218" r="34" fill="url(#pulse)" opacity="0.5">
-      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" begin="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="770" cy="218" r="17" fill="#16233d" stroke="#ffb454" stroke-width="2"/>
-    <circle cx="770" cy="218" r="5" fill="#ffb454"/>
-    <text x="770" y="186" fill="#ffb454" font-size="12" font-weight="700" letter-spacing="3">CREATE</text>
-    <text x="770" y="261" fill="#e8eefb" font-size="14" font-weight="600">FridgeChef</text>
-    <text x="770" y="279" fill="#7d92b8" font-size="11">consumer AI product</text>
-  </g>
+  <rect width="940" height="396" filter="url(#grain)" opacity="0.05" style="pointer-events:none"/>
 </svg>
