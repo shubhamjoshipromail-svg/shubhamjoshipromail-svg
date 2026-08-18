@@ -53,7 +53,7 @@
   <rect x="40" y="176" width="5" height="46" fill="#e44b27">
     <animate attributeName="x" dur="6s" begin="0s" repeatCount="indefinite" calcMode="discrete"
       keyTimes="0;.235;.243;.251;.259;.267;.275;.283;.291;.299;.307;.315;.323;.331;.339;.347;.355;.363;.368;1"
-      values="40;40;64;88;112;136;160;184;208;232;256;280;304;328;352;376;400;424;448;448"/>
+      values="40;40;64;88;112;136;160;184;208;232;256;280;304;328;352;376;400;424;464;464"/>
     <animate attributeName="opacity" dur="6s" begin="0s" repeatCount="indefinite" calcMode="discrete"
       keyTimes="0;.235;.368;.435;.50;.565;.63;.695;.76;.825;.89;.92;1"
       values="0;1;1;0;1;0;1;0;1;0;1;0;0"/>
