@@ -30,7 +30,7 @@
 
 <i>TypeScript · Pixi · WebGL/GLSL · Anthropic · OpenAI · Gemini Veo · Google Lyria · Tauri · Postgres</i>
 
-<a href="https://vibe-curator-production.up.railway.app">Try Beta 2 →</a> · <a href="https://github.com/shubhamjoshipromail-svg/vibe-curator">Source →</a> · <a href="https://portfolio-production-9040.up.railway.app/#vibe-curator">Case study →</a>
+<a href="https://vibe-curator-production.up.railway.app">Try Beta 2 →</a> · <a href="https://www.youtube.com/watch?v=EHCwmSFjtA8">Watch demo →</a> · <a href="https://github.com/shubhamjoshipromail-svg/vibe-curator">Source →</a> · <a href="https://portfolio-production-9040.up.railway.app/#vibe-curator">Case study →</a>
 
 ---
 
