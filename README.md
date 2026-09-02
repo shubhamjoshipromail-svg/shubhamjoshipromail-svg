@@ -17,7 +17,7 @@
 ## 01 / Latest
 
 <p align="center">
-  <a href="https://vibe-curator-production.up.railway.app"><img src="assets/vibe-curator-beta2-hd.webp" width="100%" alt="Vibe Curator Beta 2 is live. An animated demo shows a moonlit scene moving from prompt to editable image, atmosphere, and music, then changing every Chrome new tab or running locally as a live desktop wallpaper."/></a>
+  <a href="https://vibe-curator-production.up.railway.app"><img src="assets/vibe-curator-beta2-hd-v3.webp" width="100%" alt="Vibe Curator Beta 2 is live. An animated demo shows a moonlit scene moving from prompt to editable image, atmosphere, and music, then changing every Chrome new tab or running locally as a live desktop wallpaper."/></a>
 </p>
 
 **Vibe Curator Beta 2 is live.** It is an AI-native creative environment built on one refusal: generated media should not end as a flattened file. Describe a visual world—or bring an image or video—then keep shaping its motion, atmosphere, treatment, and music inside a persistent, source-aware editor.
