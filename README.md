@@ -17,20 +17,20 @@
 ## 01 / Latest
 
 <p align="center">
-  <a href="https://github.com/shubhamjoshipromail-svg/vibe-curator"><img src="assets/vibe-curator.svg" width="100%" alt="Vibe Curator. An AI native creative environment where generated media stays editable. Source images from OpenAI, guarded GLSL treatment from Anthropic, motion from Gemini Veo, sound from ElevenLabs."/></a>
+  <a href="https://vibe-curator-production.up.railway.app"><img src="assets/vibe-curator.svg" width="100%" alt="Vibe Curator Beta 2 is live. An AI native creative environment where generated media stays editable. Source images from OpenAI, guarded GLSL treatment from Anthropic, motion from Gemini Veo, and music from Google Lyria."/></a>
 </p>
 
-**Vibe Curator** is an AI native creative environment built on one refusal: generated media should not end as a flattened file. You describe a visual world, then keep shaping its image, motion, atmosphere, and music inside a persistent, source-aware editor.
+**Vibe Curator Beta 2 is live.** It is an AI-native creative environment built on one refusal: generated media should not end as a flattened file. Describe a visual world—or bring an image or video—then keep shaping its motion, atmosphere, treatment, and music inside a persistent, source-aware editor.
 
 **Why it matters:** most generative tools hand you an output and end the conversation. Here the scene graph stays editable, so a generation is a starting material rather than a final artifact.
 
-**Proof:** four providers land in one scene model (OpenAI for source images, Anthropic for guarded shader effects, Gemini Veo for the video path, ElevenLabs for music). Model-written GLSL passes static guards *and* a real compile check before it can touch the live pipeline, so a bad generation cannot hang the GPU. Explore, Labs, and Player run different frame budgets over a shared Pixi/WebGL runtime and audio engine.
+**Proof:** four providers land in one scene model (OpenAI for source images, Anthropic for guarded shader effects, Gemini Veo for the video path, and Google Lyria for music). Model-written GLSL passes static guards *and* a real compile check before it can touch the live pipeline, so a bad generation cannot hang the GPU. Explore, Labs, and Player run different frame budgets over a shared Pixi/WebGL runtime and audio engine.
 
-**Boundary:** a working prototype that prioritizes local use. Native packaging, cloud accounts, sync, and a real marketplace are unbuilt.
+**Shipped beta:** the web app and API are live with accounts, credits, persistent projects, and automatic deploys from `main`; the Chrome companion is published; and an Apple-silicon macOS technical-tester build is available. Apple notarization, private object-storage migration, and a mature creator marketplace remain post-beta work.
 
-<i>TypeScript · Pixi · WebGL/GLSL · Anthropic · OpenAI · Gemini Veo · ElevenLabs</i>
+<i>TypeScript · Pixi · WebGL/GLSL · Anthropic · OpenAI · Gemini Veo · Google Lyria · Tauri · Postgres</i>
 
-<a href="https://github.com/shubhamjoshipromail-svg/vibe-curator">Source →</a> · <a href="https://portfolio-production-9040.up.railway.app/#vibe-curator">Case study →</a>
+<a href="https://vibe-curator-production.up.railway.app">Try Beta 2 →</a> · <a href="https://github.com/shubhamjoshipromail-svg/vibe-curator">Source →</a> · <a href="https://portfolio-production-9040.up.railway.app/#vibe-curator">Case study →</a>
 
 ---
 

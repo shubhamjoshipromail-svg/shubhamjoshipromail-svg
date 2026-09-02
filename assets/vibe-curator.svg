@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 280" width="940" height="280" role="img" aria-label="Vibe Curator. An AI native creative environment where generated media stays editable. Source images from OpenAI, treatment shaders from Anthropic, motion from Gemini Veo, sound from ElevenLabs.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 280" width="940" height="280" role="img" aria-label="Vibe Curator Beta 2 is live. An AI native creative environment where generated media stays editable. Source images from OpenAI, treatment shaders from Anthropic, motion from Gemini Veo, and music from Google Lyria.">
   <defs>
     <radialGradient id="orbA" cx="35%" cy="30%" r="70%">
       <stop offset="0%" stop-color="#ffffff"/>
@@ -60,7 +60,13 @@
     <rect x="0" y="150" width="940" height="130" fill="url(#scrimBottom)"/>
 
     <text x="26" y="40" fill="#bbdbea" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.6">04 / GENERATIVE PRODUCT</text>
-    <text x="914" y="40" text-anchor="end" fill="#bbdbea" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.6">PERSONAL PROJECT / 2026</text>
+    <g transform="translate(780 23)">
+      <circle cx="7" cy="7" r="3.5" fill="#7ee7b3">
+        <animate attributeName="opacity" values="1;.35;1" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="0" y="0" width="134" height="21" rx="10.5" fill="#7ee7b3" fill-opacity=".12" stroke="#7ee7b3" stroke-opacity=".55"/>
+      <text x="18" y="14" fill="#b8f2d4" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="700" letter-spacing="1.2">BETA 2 · LIVE</text>
+    </g>
 
     <text x="26" y="146" fill="#ffffff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="62" font-weight="600" letter-spacing="-3">Vibe Curator</text>
     <text x="28" y="180" fill="#d8ecf7" font-family="Georgia, Times New Roman, serif" font-size="19" font-weight="500">Generated media that stays editable instead of ending as a flattened file.</text>
@@ -77,7 +83,7 @@
       <text x="26"  y="258">OpenAI images</text>
       <text x="248" y="258">Guarded GLSL, Anthropic</text>
       <text x="470" y="258">Gemini Veo</text>
-      <text x="692" y="258">ElevenLabs</text>
+      <text x="692" y="258">Google Lyria</text>
     </g>
     <g fill="#75ccff">
       <circle cx="232" cy="234" r="2.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="4s" begin="0s"   repeatCount="indefinite"/></circle>
