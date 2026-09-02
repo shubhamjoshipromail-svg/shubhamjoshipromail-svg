@@ -17,7 +17,7 @@
 ## 01 / Latest
 
 <p align="center">
-  <a href="https://vibe-curator-production.up.railway.app"><img src="assets/vibe-curator.svg" width="100%" alt="Vibe Curator Beta 2 is live. An AI native creative environment where generated media stays editable. Source images from OpenAI, guarded GLSL treatment from Anthropic, motion from Gemini Veo, and music from Google Lyria."/></a>
+  <a href="https://vibe-curator-production.up.railway.app"><img src="assets/vibe-curator-beta2.svg" width="100%" alt="Vibe Curator Beta 2 is live. An AI native creative environment where generated media stays editable. Source images from OpenAI, guarded GLSL treatment from Anthropic, motion from Gemini Veo, and music from Google Lyria."/></a>
 </p>
 
 **Vibe Curator Beta 2 is live.** It is an AI-native creative environment built on one refusal: generated media should not end as a flattened file. Describe a visual world—or bring an image or video—then keep shaping its motion, atmosphere, treatment, and music inside a persistent, source-aware editor.
