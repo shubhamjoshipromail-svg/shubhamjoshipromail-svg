@@ -6,6 +6,7 @@
   <a href="https://portfolio-production-9040.up.railway.app"><img src="https://img.shields.io/badge/Portfolio-live-e44b27?style=flat-square&labelColor=11120f" alt="Live portfolio"/></a>
   <a href="https://www.youtube.com/watch?v=NdwP83VBurU"><img src="https://img.shields.io/badge/AgentDock-walkthrough-e44b27?style=flat-square&labelColor=11120f" alt="AgentDock video walkthrough"/></a>
   <a href="https://huggingface.co/shubhamjoshipro"><img src="https://img.shields.io/badge/Models-hugging%20face-11120f?style=flat-square&labelColor=11120f" alt="Hugging Face models"/></a>
+  <a href="https://github.com/shubhamjoshipromail-svg/team-tools"><img src="https://img.shields.io/badge/Team-Tools-11120f?style=flat-square&labelColor=11120f" alt="Team Tools repository"/></a>
   <a href="https://www.linkedin.com/in/shubham-joshi1/"><img src="https://img.shields.io/badge/LinkedIn-shubham--joshi1-11120f?style=flat-square&labelColor=11120f" alt="LinkedIn profile"/></a>
   <a href="mailto:shubhamjoshipro.mail@gmail.com"><img src="https://img.shields.io/badge/Email-say%20hello-11120f?style=flat-square&labelColor=11120f" alt="Email Shubham"/></a>
 </p>
