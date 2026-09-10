@@ -10,6 +10,11 @@
   <a href="mailto:shubhamjoshipro.mail@gmail.com"><img src="https://img.shields.io/badge/Email-say%20hello-11120f?style=flat-square&labelColor=11120f" alt="Email Shubham"/></a>
 </p>
 
+<p align="center">
+  <a href="https://batch-draft-review-production.up.railway.app/"><img src="https://img.shields.io/badge/Tools-Batch%20Draft%20Review-e44b27?style=flat-square&labelColor=11120f" alt="Open Batch Draft Review"/></a>
+</p>
+
+
 <p align="center"><b>MS Business Analytics &amp; AI @ Johns Hopkins</b> (Dean's Scholarship, 2026) &#183; moving to San Francisco<br/>Applied AI &#183; forward deployed &#183; founding engineer &#183; data science</p>
 
 ---
