@@ -67,7 +67,7 @@ A support routing copilot where <b>redesigning the labels mattered more than ano
 
 <b>Why it matters:</b> the instinct is to reach for a bigger model. The data said the task definition was broken instead.
 
-<b>Proof:</b> TF-IDF 44.1%, ModernBERT on the original 10-class taxonomy 52.3%. Collapsing 10 overlapping classes into 7 operational queues took it to <b>73.1%</b> validation accuracy (weighted-F1 0.713). Confidence gating at 0.80 auto-routes 62.3% of tickets at 85.5% accuracy; the rest go to a human.
+<b>Proof:</b> TF-IDF 44.1%, ModernBERT on the original 10-class taxonomy 52.3%. Collapsing 10 overlapping classes into 7 operational queues took it to 73.1% validation and <b>74.0% on the held-out test set</b> (95% CI 72.6–75.4, macro-F1 0.576). Calibration measured: ECE 0.080. Confidence gating at 0.80 auto-routes 62.5% of tickets at 85.0% accuracy; the rest go to a human.
 
 <i>PyTorch · ModernBERT · Hugging Face · leakage-safe splits</i>
 
@@ -148,7 +148,7 @@ Vibe Curator treats a model as an untrusted code author. Generated GLSL passes a
 </details>
 
 <details><summary><b>🎫 Applied NLP: the OpsPilot story</b></summary><br/>
-Baselines first: TF-IDF + logistic regression 44.1%, and ModernBERT on the original 10-class taxonomy 52.3%. The results showed the labels were the problem. Redesigning 10 overlapping classes into 7 routing families (~24k leakage-safe examples, fixed splits) produced 73.1% validation accuracy and weighted-F1 0.713 — reproducible from <code>trainer_state.json</code> in the published model repo. Confidence gating at 0.80 auto-routes 62.3% of tickets at 85.5% accuracy; the rest escalate to humans. The model is deployed to <a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Hugging Face</a> with weights, tokenizer, label mapping, and checkpoint history.
+Baselines first: TF-IDF + logistic regression 44.1%, and ModernBERT on the original 10-class taxonomy 52.3%. The results showed the labels were the problem. Redesigning 10 overlapping classes into 7 routing families (~24k leakage-safe examples, fixed splits) produced 73.1% validation accuracy — reproducible from <code>trainer_state.json</code> in the published model repo — and a locked 74.0% on the held-out test set (95% CI 72.6–75.4, weighted-F1 0.721). I measured calibration rather than assuming it: ECE 0.080, which is what makes the confidence gate trustworthy. At a 0.80 threshold the model auto-routes 62.5% of tickets at 85.0% accuracy; the rest escalate to humans. Macro-F1 is 0.576, so the model is still weak on minority queues — that gap, not raw accuracy, is the next thing to fix. The model is deployed to <a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Hugging Face</a> with weights, tokenizer, label mapping, and checkpoint history.
 </details>
 
 <details><summary><b>📊 Analytics &amp; experiments</b></summary><br/>
