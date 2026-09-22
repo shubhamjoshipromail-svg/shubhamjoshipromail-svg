@@ -67,11 +67,11 @@ A support routing copilot where <b>redesigning the labels mattered more than ano
 
 <b>Why it matters:</b> the instinct is to reach for a bigger model. The data said the task definition was broken instead.
 
-<b>Proof:</b> TF-IDF ~44%, CNN ~52%, ModernBERT on the original taxonomy ~52%. Collapsing 10 overlapping classes into 7 operational queues took it to <b>73.1%</b>. Confidence gating at 0.80 auto-routes 62.3% of tickets at 85.5% accuracy; the rest go to a human.
+<b>Proof:</b> TF-IDF 44.1%, ModernBERT on the original 10-class taxonomy 52.3%. Collapsing 10 overlapping classes into 7 operational queues took it to <b>73.1%</b> validation accuracy (weighted-F1 0.713). Confidence gating at 0.80 auto-routes 62.3% of tickets at 85.5% accuracy; the rest go to a human.
 
 <i>PyTorch · ModernBERT · Hugging Face · leakage-safe splits</i>
 
-<a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Model →</a> · <a href="https://github.com/shubhamjoshipromail-svg/opspilot-ai/tree/codex/ticket-intelligence">Source →</a>
+<a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Model →</a> · <a href="https://github.com/shubhamjoshipromail-svg/opspilot-ai">Source →</a>
 
 </td>
 </tr>
@@ -118,7 +118,7 @@ A drug-interaction reviewer over <b>152,416 records</b>, built on one hard bound
 1. **Deterministic systems decide; models explain.** RxCheck's detection core never asks an LLM whether an interaction exists.
 2. **Humans keep the pen on consequential actions.** In AgentDock there is no grant configuration under which an outbound send auto-fires.
 3. **Evaluation is part of the product.** OpsPilot's unstable DeBERTa runs were excluded rather than reported; RxCheck ships a 26-scenario eval you can rerun.
-4. **The bottleneck is usually the data.** OpsPilot went ~52% → 73.1% by redesigning a noisy 10-label taxonomy, not by scaling the model.
+4. **The bottleneck is usually the data.** OpsPilot went 52.3% → 73.1% by redesigning a noisy 10-label taxonomy, not by scaling the model — though part of that gain is the easier 7-class problem, which is the honest way to report it.
 5. **Generation needs a compiler, not just a prompt.** Vibe Curator gates every model-written shader through static analysis and a real compile pass before it renders.
 6. **Say where the work stops.** Every project above carries an explicit boundary. That is the part most portfolios leave out.
 
@@ -148,7 +148,7 @@ Vibe Curator treats a model as an untrusted code author. Generated GLSL passes a
 </details>
 
 <details><summary><b>🎫 Applied NLP: the OpsPilot story</b></summary><br/>
-Baselines first: TF-IDF + logistic regression ~44%, CNN ~52%, and ModernBERT on the original taxonomy ~52%. The results showed the labels were the problem. Redesigning 10 overlapping classes into 7 routing families (~24k leakage-safe examples, fixed splits) produced 73.1% accuracy and weighted-F1 0.713. Confidence gating at 0.80 auto-routes 62.3% of tickets at 85.5% accuracy; the rest escalate to humans. The model is deployed to <a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Hugging Face</a> with weights, tokenizer, label mapping, and checkpoint history.
+Baselines first: TF-IDF + logistic regression 44.1%, and ModernBERT on the original 10-class taxonomy 52.3%. The results showed the labels were the problem. Redesigning 10 overlapping classes into 7 routing families (~24k leakage-safe examples, fixed splits) produced 73.1% validation accuracy and weighted-F1 0.713 — reproducible from <code>trainer_state.json</code> in the published model repo. Confidence gating at 0.80 auto-routes 62.3% of tickets at 85.5% accuracy; the rest escalate to humans. The model is deployed to <a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Hugging Face</a> with weights, tokenizer, label mapping, and checkpoint history.
 </details>
 
 <details><summary><b>📊 Analytics &amp; experiments</b></summary><br/>
