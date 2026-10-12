@@ -18,7 +18,7 @@
 ## Now: Tacet
 
 <p align="center">
-  <a href="https://core-production-332c.up.railway.app"><img src="assets/tacet.jpg" width="100%" alt="Tacet explains how it works in four steps: predict, ask once, prove, teach and export. A blocked save quotes the expert: no asset number, no capex booking."/></a>
+  <a href="https://core-production-332c.up.railway.app"><img src="assets/tacet-film.webp" width="100%" alt="Tacet in thirty seconds. Its apprentice, Mira, guesses cost centre 4711 before the expert books an invoice; the expert codes 0400. Mira asks one question, the answer compiles into a rule, the rule passes a sealed test on eleven fresh invoices, and on Monday it stops a new hire's wrong save: Sabine would stop here."/></a>
 </p>
 
 Every team has someone whose judgment never made it into the SOP. They know which vendor double-bills and which equipment counts as capex. AI agents and new hires follow the written process, so they get those calls wrong.
