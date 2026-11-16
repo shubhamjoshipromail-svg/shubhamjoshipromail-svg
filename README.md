@@ -35,6 +35,21 @@ Tacet learns those rules by watching the expert work. Before each decision it wr
 
 ---
 
+## Open source
+
+Projects built to be installed and used by other people, kept separate from the product work above and below.
+
+### [software-world-model](https://github.com/shubhamjoshipromail-svg/software-world-model)
+**A benchmark that checks what a computer-use agent did to the database, not what it said it did.**
+
+Agents drive real self-hosted business apps (Invoice Ninja, Dolibarr, Odoo 17 and 18) in a browser. Every episode starts from the same snapshot, and the whole database is diffed afterwards, so each run reports collateral damage, irreversible changes and false completions alongside success. From Odoo 17 to 18, success held at 78% and 76% while unintended changes rose from 15% to 21%: the agent reset posted invoices to draft, un-reconciled the payment, and reported the task done.
+
+635 scored episodes, all published · bring your own model or agent · MIT · a small study, with its limits listed
+
+<a href="https://github.com/shubhamjoshipromail-svg/software-world-model">Source →</a> · <a href="https://github.com/shubhamjoshipromail-svg/software-world-model/blob/main/reports/phase0_writeup.md">Write-up →</a> · <a href="https://github.com/shubhamjoshipromail-svg/software-world-model#quickstart">Run it →</a>
+
+---
+
 ## Before Tacet
 
 <table>
