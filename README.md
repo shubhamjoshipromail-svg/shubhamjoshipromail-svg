@@ -51,11 +51,11 @@ Agents drive real self-hosted business apps (Invoice Ninja, Dolibarr, Odoo 17 an
 ### [localddi](https://github.com/shubhamjoshipromail-svg/localddi)
 **A drug interaction API you run yourself, for the one NLM switched off.**
 
-NLM retired its free RxNav drug-drug interaction API on 2 January 2024, and integrations such as OpenEMR's prescription check lost their data source. localddi answers the same URLs in the same JSON shape from a SQLite file on your own machine. One command imports RxNorm and the DDInter 2.0 database; after that every lookup is a SQL query, with no model and no outbound calls. On the 15 November 2026 import, 1,596 of DDInter's 1,971 drugs matched an RxNorm ingredient, which keeps 176,263 of 234,981 interaction pairs.
+NLM retired its free RxNav drug-drug interaction API on 2 January 2024, and integrations such as OpenEMR's prescription check lost their data source. localddi answers the same URLs in the same JSON shape from a SQLite file on your own machine. One command imports RxNorm and the DDInter 2.0 database; after that every lookup is a SQL query, with no model and no outbound calls. Checked against the ONC high-priority interaction list, it finds 721 of the 793 pairs that can still be tested (90.9%), but only 29% of the DrugBank pairs NLM used to return, and the evaluation says so.
 
-134 offline tests · code MIT, data CC BY-NC-SA and not bundled · not clinically validated, and not yet tested inside OpenEMR
+176,817 interactions from 14 DDInter files · 158 offline tests · code MIT, data CC BY-NC-SA and not bundled · not clinically validated, and not yet tested inside OpenEMR
 
-<a href="https://github.com/shubhamjoshipromail-svg/localddi">Source →</a> · <a href="https://github.com/shubhamjoshipromail-svg/localddi/blob/main/docs/nlm-compatibility.md">What matches NLM and what doesn't →</a> · <a href="https://github.com/shubhamjoshipromail-svg/localddi#quickstart">Run it →</a>
+<a href="https://github.com/shubhamjoshipromail-svg/localddi">Source →</a> · <a href="https://github.com/shubhamjoshipromail-svg/localddi/blob/main/docs/evaluation.md">Evaluation →</a> · <a href="https://github.com/shubhamjoshipromail-svg/localddi#quickstart">Run it →</a>
 
 ---
 
