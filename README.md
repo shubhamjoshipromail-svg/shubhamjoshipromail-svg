@@ -154,11 +154,7 @@ Four CMS sources reconciled into a 138,263 × 208 dataset, with a 12× enrollmen
 <details><summary><b>Tools, and where they're used</b></summary><br/>
 
 | Layer | Tools | Where |
-|
-
-</details>
-
----|---|
+|---|---|---|
 | Learning systems | Bayesian updating, value-of-information question planning, sealed held-out tests | Tacet |
 | Agents | MCP servers and clients, tool calling, approvals, guardrails, evals | Tacet, [AgentDock](https://github.com/shubhamjoshipromail-svg/AgentDock), [rxcheck](https://github.com/shubhamjoshipromail-svg/rxcheck) |
 | Voice | ElevenLabs agents, custom LLM endpoint, turn-taking | Tacet, [Negotiator](https://github.com/shubhamjoshipromail-svg/hacknation_bluejays) |
@@ -166,6 +162,8 @@ Four CMS sources reconciled into a 138,263 × 208 dataset, with a 12× enrollmen
 | Generative | multi-provider orchestration, guarded codegen, WebGL/GLSL | [vibe-curator](https://github.com/shubhamjoshipromail-svg/vibe-curator) |
 | Product | Python, FastAPI, TypeScript, React, Next.js, Chrome extensions | every live link above |
 | Data and delivery | SQL/Postgres, Alembic, Prisma, Docker, GitHub Actions, Railway | Tacet, the CMS pipeline, RxCheck's 152K-record import |
+
+</details>
 
 ---
 
