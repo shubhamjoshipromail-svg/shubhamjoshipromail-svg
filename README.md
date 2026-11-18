@@ -21,9 +21,11 @@
   <a href="https://core-production-332c.up.railway.app"><img src="assets/tacet-film.webp" width="100%" alt="Tacet in thirty seconds. Its apprentice, Mira, guesses cost centre 4711 before the expert books an invoice; the expert codes 0400. Mira asks one question, the answer compiles into a rule, the rule passes a sealed test on eleven fresh invoices, and on Monday it stops a new hire's wrong save: Sabine would stop here."/></a>
 </p>
 
-Every team has someone whose judgment never made it into the SOP. They know which vendor double-bills and which equipment counts as capex. AI agents and new hires follow the written process, so they get those calls wrong.
+Every team has someone whose judgment never made it into the SOP: which vendor double-bills, which equipment counts as capex. Tacet learns those rules by watching that person work. When it guesses their next decision wrong, it waits for a pause and asks one question. The answer becomes a rule in their own words, tested on cases they never showed, then served to AI agents over API and MCP and used to stop a new hire's wrong save.
 
-Tacet learns those rules by watching the expert work. Before each decision it writes down what it expects them to do. When it guesses wrong, it waits for a pause and asks one question. The answer becomes a rule in the expert's own words. The rule is tested on cases the expert never showed, then served to agents over API and MCP and used to stop a new hire's wrong save, quoting the expert's sentence.
+<a href="https://core-production-332c.up.railway.app">See it live →</a> · <a href="https://core-production-332c.up.railway.app/app">Try the demo →</a> · The code is private; <a href="mailto:shubhamjoshipro.mail@gmail.com?subject=Tacet">email me</a> for a walkthrough.
+
+<details><summary><b>How Tacet works, and how it was built</b></summary><br/>
 
 - **A model can't just claim a rule was learned.** The engine is plain Python with Bayesian thresholds, and language models only translate. Sealed tests commit their predictions with a SHA-256 hash before any human labels the cases. A rule doesn't compile unless it quotes the expert verbatim and reproduces their past decisions.
 - **It works on a real ledger today.** When screen capture failed on a real accounting app, I rebuilt the first release around the CSV export bookkeepers already have. On the sample ledger, one answered question took held-back accuracy from 96% to 100% across 44 transactions.
@@ -31,35 +33,43 @@ Tacet learns those rules by watching the expert work. Before each decision it wr
 
 <i>Python · FastAPI · numpy · Postgres · React · TypeScript · Chrome MV3 · ElevenLabs agents · MCP · Playwright · Railway</i>
 
-<a href="https://core-production-332c.up.railway.app">See it live →</a> · <a href="https://core-production-332c.up.railway.app/app">Try the demo →</a> · The code is private; I'm happy to walk you through it: <a href="mailto:shubhamjoshipro.mail@gmail.com?subject=Tacet">email me</a>.
+</details>
 
 ---
 
 ## Open source
 
-Projects built to be installed and used by other people, kept separate from the product work above and below.
+Tools anyone can install and run, each with a demo that needs no account and an evaluation that includes the results that didn't go well. Click a card to open the repo.
 
-### [software-world-model](https://github.com/shubhamjoshipromail-svg/software-world-model)
-**A benchmark that checks what a computer-use agent did to the database, not what it said it did.**
+<table>
+<tr>
+<td width="33%" valign="top">
+<a href="https://github.com/shubhamjoshipromail-svg/software-world-model"><img src="assets/oss/swm.svg" width="100%" alt="software-world-model card"/></a>
 
-Agents drive real self-hosted business apps (Invoice Ninja, Dolibarr, Odoo 17 and 18) in a browser. Every episode starts from the same snapshot, and the whole database is diffed afterwards, so each run reports collateral damage, irreversible changes and false completions alongside success. From Odoo 17 to 18, success held at 78% and 76% while unintended changes rose from 15% to 21%: the agent reset posted invoices to draft, un-reconciled the payment, and reported the task done.
+**Did the agent break something?** AI agents use real business apps (Odoo, Dolibarr, Invoice Ninja), and afterwards the whole database is compared, so a run that "succeeded" but undid a customer's payment gets caught.
 
-635 scored episodes, all published · bring your own model or agent · MIT · a small study, with its limits listed
+<a href="https://github.com/shubhamjoshipromail-svg/software-world-model">Repo</a> · <a href="https://github.com/shubhamjoshipromail-svg/software-world-model/blob/main/reports/phase0_writeup.md">Write-up</a> · <a href="https://github.com/shubhamjoshipromail-svg/software-world-model#quickstart">Run it</a>
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/shubhamjoshipromail-svg/localddi"><img src="assets/oss/localddi.svg" width="100%" alt="localddi card"/></a>
 
-<a href="https://github.com/shubhamjoshipromail-svg/software-world-model">Source →</a> · <a href="https://github.com/shubhamjoshipromail-svg/software-world-model/blob/main/reports/phase0_writeup.md">Write-up →</a> · <a href="https://github.com/shubhamjoshipromail-svg/software-world-model#quickstart">Run it →</a>
+**A drug interaction checker you host.** The US government's free interaction API shut down in 2024 and left health software without data. localddi answers the same requests from a database on your own machine.
 
-### [localddi](https://github.com/shubhamjoshipromail-svg/localddi)
-**A drug interaction API you run yourself, for the one NLM switched off.**
+<a href="https://github.com/shubhamjoshipromail-svg/localddi">Repo</a> · <a href="https://github.com/shubhamjoshipromail-svg/localddi/blob/main/docs/evaluation.md">Evaluation</a> · <a href="https://github.com/shubhamjoshipromail-svg/localddi#try-it-in-one-minute">Try it</a>
+</td>
+<td width="33%" valign="top">
+<a href="https://github.com/shubhamjoshipromail-svg/callswap"><img src="assets/oss/callswap.svg" width="100%" alt="callswap card"/></a>
 
-NLM retired its free RxNav drug-drug interaction API on 2 January 2024, and integrations such as OpenEMR's prescription check lost their data source. localddi answers the same URLs in the same JSON shape from a SQLite file on your own machine. One command imports RxNorm and the DDInter 2.0 database; after that every lookup is a SQL query, with no model and no outbound calls. Checked against the ONC high-priority interaction list, it finds 721 of the 793 pairs that can still be tested (90.9%), but only 29% of the DrugBank pairs NLM used to return, and the evaluation says so.
+**Stop paying an LLM for easy questions.** Trains a small local model on the answers your LLM already gave, then tests how often they agree before you switch. Unsure calls still go to the LLM.
 
-176,817 interactions from 14 DDInter files · 158 offline tests · code MIT, data CC BY-NC-SA and not bundled · not clinically validated, and not yet tested inside OpenEMR
-
-<a href="https://github.com/shubhamjoshipromail-svg/localddi">Source →</a> · <a href="https://github.com/shubhamjoshipromail-svg/localddi/blob/main/docs/evaluation.md">Evaluation →</a> · <a href="https://github.com/shubhamjoshipromail-svg/localddi#quickstart">Run it →</a>
+<a href="https://github.com/shubhamjoshipromail-svg/callswap">Repo</a> · <a href="https://github.com/shubhamjoshipromail-svg/callswap#results">Results</a> · <a href="https://github.com/shubhamjoshipromail-svg/callswap#60-second-demo">Try it</a>
+</td>
+</tr>
+</table>
 
 ---
 
-## Before Tacet
+## Selected builds
 
 <table>
 <tr>
@@ -68,9 +78,9 @@ NLM retired its free RxNav drug-drug interaction API on 2 January 2024, and inte
 ### AgentDock
 **Agents that act on real accounts, behind rules the prompt can't change.**
 
-Multi-step agent flows run real MCP tools behind deny-by-default policy, approval gates and budget caps. Permissions are resolved on the server, so prompt text can ask for a capability but never grant one. An agent can draft your email; sending always waits for a human.
+Multi-step agent flows run real MCP tools behind deny-by-default policy, approval gates and budget caps. An agent can draft your email; sending always waits for a human.
 
-225 commits · 66 test files · Postgres job queue with crash recovery and idempotent actions
+225 commits · 66 test files · crash-safe Postgres job queue
 
 <a href="https://www.youtube.com/watch?v=NdwP83VBurU">Walkthrough →</a> · <a href="https://github.com/shubhamjoshipromail-svg/AgentDock">Source →</a>
 
@@ -80,9 +90,9 @@ Multi-step agent flows run real MCP tools behind deny-by-default policy, approva
 ### Vibe Curator
 **Generated media that stays editable.**
 
-Images, video, shaders and music from four providers land in one persistent scene, instead of ending as a flattened file. Model-written GLSL must clear a static guard and a real compile before it renders, so a bad generation can't hang the GPU.
+Images, video, shaders and music from four providers land in one persistent scene instead of a flattened file. Model-written GLSL must pass a static guard and a real compile before it renders.
 
-Beta 2 live · web, Chrome new tab, macOS wallpaper · OpenAI, Anthropic, Veo, Lyria
+Beta 2 live · web, Chrome new tab, macOS wallpaper
 
 <a href="https://vibe-curator-production.up.railway.app">Try it →</a> · <a href="https://www.youtube.com/watch?v=EHCwmSFjtA8">Demo →</a> · <a href="https://github.com/shubhamjoshipromail-svg/vibe-curator">Source →</a>
 
@@ -94,50 +104,40 @@ Beta 2 live · web, Chrome new tab, macOS wallpaper · OpenAI, Anthropic, Veo, L
 ### OpsPilot
 **The fix was the labels, not a bigger model.**
 
-A support-ticket router. ModernBERT stalled at 52.3% on ten overlapping classes. Regrouping them into seven real queues took it to 73.1% validation and 74.0% on the locked test set (95% CI 72.6–75.4). At 0.80 confidence it auto-routes 62.5% of tickets at 85.0% accuracy and hands the rest to a person.
-
-Calibrated (ECE 0.080) · macro-F1 0.576, still weak on small queues
+A support-ticket router. ModernBERT stalled at 52.3% on ten overlapping classes; regrouping them into seven real queues took it to 74.0% on the locked test set. At 0.80 confidence it auto-routes 62.5% of tickets at 85.0% accuracy.
 
 <a href="https://huggingface.co/shubhamjoshipro/opspilot-routing-modernbert-base-clean-v1">Model →</a> · <a href="https://github.com/shubhamjoshipromail-svg/opspilot-ai">Source →</a>
 
 </td>
 <td width="50%" valign="top">
 
-### RxCheck
-**The database decides; the model only explains.**
-
-Drug-interaction review over 152,416 records. Detection is deterministic, and core checking still runs when every outside service is down: 26 of 26 failure scenarios pass. The research report gives the unflattering results equal billing.
-
-RxNorm normalization · override audit trail · a research prototype, and labelled as one
-
-<a href="https://pharmacy-production-f226.up.railway.app">Live demo →</a> · <a href="https://github.com/shubhamjoshipromail-svg/rxcheck">Source →</a>
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
 ### ACHP × CMS
 **A policy question nobody had measured, answered for the client.**
 
-Four CMS sources reconciled into a 138,263 × 208 dataset, with a 12× enrollment overcount caught before it reached a model. OLS with HC3 errors measured the cost shift, and ACHP held the stronger cost position in 493 of 875 counties. Top-three team school-wide; presented to the client's leadership.
+Four CMS sources reconciled into a 138,263 × 208 dataset, with a 12× enrollment overcount caught before it reached a model. ACHP held the stronger cost position in 493 of 875 counties. Presented to the client's leadership.
 
 <a href="https://portfolio-production-9040.up.railway.app/#achp">Case study →</a>
 
 </td>
-<td width="50%" valign="top">
-
-### Smaller builds
-
-[Negotiator](https://github.com/shubhamjoshipromail-svg/hacknation_bluejays), a voice agent that negotiates inside explicit deal limits.<br/>
-[FridgeChef](https://fride-project-production.up.railway.app), fridge and receipt photos into inventory and streamed recipes.<br/>
-[Nimbus](https://nimbus-web-production.up.railway.app), a burnout companion with nine grounded tools, built in 14 hours.<br/>
-[Team Tools](https://github.com/shubhamjoshipromail-svg/team-tools), small tools for repetitive coordination work, including [Batch Draft Review](https://batch-draft-review-production.up.railway.app/).<br/>
-[bank-marketing-ml](https://github.com/shubhamjoshipromail-svg/bank-marketing-ml), 7th of 59, ROC-AUC 0.8285.
-
-</td>
 </tr>
 </table>
+
+<details><summary><b>More projects</b> (hackathons, experiments, coursework)</summary><br/>
+
+| Project | What it is |
+|---|---|
+| [RxCheck](https://pharmacy-production-f226.up.railway.app) · [source](https://github.com/shubhamjoshipromail-svg/rxcheck) | Pharmacist-facing interaction review over 152,416 records; the prototype localddi came from |
+| [Negotiator](https://github.com/shubhamjoshipromail-svg/hacknation_bluejays) | Voice agent that negotiates inside explicit deal limits |
+| [FridgeChef](https://fride-project-production.up.railway.app) | Fridge and receipt photos into inventory and streamed recipes |
+| [Nimbus](https://nimbus-web-production.up.railway.app) | Burnout companion with nine grounded tools, built in 14 hours |
+| [Team Tools](https://github.com/shubhamjoshipromail-svg/team-tools) | Small tools for repetitive coordination work, including [Batch Draft Review](https://batch-draft-review-production.up.railway.app/) |
+| [jev-market-radar](https://github.com/shubhamjoshipromail-svg/jev-market-radar) | Breaking news checked against prediction-market resolution rules |
+| [bank-marketing-ml](https://github.com/shubhamjoshipromail-svg/bank-marketing-ml) | Term-deposit propensity model, 7th of 59, ROC-AUC 0.8285 |
+| [property-automl-hackathon](https://github.com/shubhamjoshipromail-svg/property-automl-hackathon) | Property-price regression, 19th place |
+| [dating-agent-rl](https://github.com/shubhamjoshipromail-svg/dating-agent-rl) | Tabular Q-learning and SARSA with an LLM as the classifier |
+| [questforge-ai](https://github.com/shubhamjoshipromail-svg/questforge-ai) | Phaser 4 game experiment, unfinished |
+
+</details>
 
 ---
 
@@ -151,10 +151,14 @@ Four CMS sources reconciled into a 138,263 × 208 dataset, with a 12× enrollmen
 
 ---
 
-## Tools, and where they're used
+<details><summary><b>Tools, and where they're used</b></summary><br/>
 
 | Layer | Tools | Where |
-|---|---|---|
+|
+
+</details>
+
+---|---|
 | Learning systems | Bayesian updating, value-of-information question planning, sealed held-out tests | Tacet |
 | Agents | MCP servers and clients, tool calling, approvals, guardrails, evals | Tacet, [AgentDock](https://github.com/shubhamjoshipromail-svg/AgentDock), [rxcheck](https://github.com/shubhamjoshipromail-svg/rxcheck) |
 | Voice | ElevenLabs agents, custom LLM endpoint, turn-taking | Tacet, [Negotiator](https://github.com/shubhamjoshipromail-svg/hacknation_bluejays) |
@@ -164,8 +168,6 @@ Four CMS sources reconciled into a 138,263 × 208 dataset, with a 12× enrollmen
 | Data and delivery | SQL/Postgres, Alembic, Prisma, Docker, GitHub Actions, Railway | Tacet, the CMS pipeline, RxCheck's 152K-record import |
 
 ---
-
-## More detail
 
 <details><summary><b>Tacet: how a question gets chosen</b></summary><br/>
 The planner scores each candidate question by its expected value of information against the cost of interrupting, and it only speaks at a natural pause. An answer is compiled into a rule in a small DSL. The compile gate rejects the rule unless its quote appears verbatim in the transcript and it reproduces the expert's earlier decisions. A vague answer once produced "Home Depot → Equipment" for every purchase; replaying the rule against history caught it. Each change writes a learning receipt: the prediction before and after, the expert's quote, and the parameter that moved. In a live hackathon run, a taught threshold of 3,600 moved to 4,069 after two counterexamples, and the sealed test went from 9/11 to 11/11.

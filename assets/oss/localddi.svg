@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="400" height="420" role="img" aria-label="localddi: a drug interaction API you run yourself, replacing NLM's retired RxNav interaction API. Ask about warfarin and aspirin and it answers from a local database: severity major. Finds 91% of the ONC high-priority interaction pairs.">
+  <rect width="400" height="420" fill="#f3f0e8"/>
+  <rect width="400" height="4" fill="#e44b27"/>
+  <text x="28" y="40" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.6">SELF-HOSTED API · MIT</text>
+  <text x="28" y="76" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="27" font-weight="650" letter-spacing="-1">localddi</text>
+  <path d="M28 94 H372" stroke="#11120f"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="16" font-weight="600">
+    <rect x="28" y="116" width="130" height="40" rx="20" fill="none" stroke="#11120f" stroke-width="1.5"/>
+    <text x="93" y="141" text-anchor="middle" fill="#11120f">warfarin</text>
+    <text x="186" y="142" text-anchor="middle" fill="#11120f" font-size="22">+</text>
+    <rect x="214" y="116" width="130" height="40" rx="20" fill="none" stroke="#11120f" stroke-width="1.5"/>
+    <text x="279" y="141" text-anchor="middle" fill="#11120f">aspirin</text>
+  </g>
+  <path d="M186 164 V188" stroke="#11120f" stroke-width="1.5"/><path d="M180 182 L186 190 L192 182" fill="none" stroke="#11120f" stroke-width="1.5"/>
+  <rect x="28" y="198" width="344" height="122" fill="#11120f"/>
+  <text x="42" y="220" fill="#8a8a80" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="1">localhost:8080 · no network</text>
+  <g font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#f3f0e8">
+    <text x="42" y="248">{ "pair": ["warfarin", "aspirin"],</text>
+    <text x="58" y="270">"severity": <tspan fill="#ff7a55">"major"</tspan>,</text>
+    <text x="58" y="292">"source": "DDInter 2.0" }</text>
+  </g>
+  <path d="M28 348 H372" stroke="#11120f" stroke-opacity="0.25"/>
+  <text x="28" y="378" fill="#11120f" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">for the API NLM switched off in 2024</text>
+  <text x="28" y="400" fill="#66665e" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">finds <tspan fill="#e44b27" font-weight="650">91%</tspan> of ONC high-priority pairs</text>
+</svg>

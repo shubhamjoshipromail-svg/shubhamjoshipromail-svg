@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="400" height="420" role="img" aria-label="callswap: trains a local model on your LLM's past answers and tests it before you switch anything. In the demo the local model would take 396 of every 1,000 calls at 99.90% agreement, but the bar was 70% of calls, so the verdict is FAIL.">
+  <rect width="400" height="420" fill="#f3f0e8"/>
+  <rect width="400" height="4" fill="#e44b27"/>
+  <text x="28" y="40" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.6">LLM COST TOOL · MIT</text>
+  <text x="28" y="76" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="27" font-weight="650" letter-spacing="-1">callswap</text>
+  <path d="M28 94 H372" stroke="#11120f"/>
+  <text x="28" y="124" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.2">EVERY 1,000 CLASSIFICATION CALLS</text>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="14">
+    <text x="28" y="156" fill="#11120f" font-weight="600">local model</text>
+    <rect x="128" y="141" width="96" height="22" fill="#11120f"/>
+    <text x="232" y="157" fill="#11120f" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">396 · 1 ms</text>
+    <text x="28" y="194" fill="#66665e">your LLM</text>
+    <rect x="128" y="179" width="146" height="22" fill="none" stroke="#66665e"/>
+    <text x="282" y="195" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">604</text>
+  </g>
+  <text x="28" y="232" fill="#66665e" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">when the local model answers, it agrees with the LLM</text>
+  <text x="28" y="266" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="30" font-weight="650" letter-spacing="-1">99.90%</text>
+  <text x="150" y="266" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">95% lower bound 99.45%</text>
+  <rect x="28" y="290" width="344" height="40" fill="none" stroke="#e44b27" stroke-width="1.5"/>
+  <text x="42" y="315" fill="#e44b27" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="600">FAIL</text>
+  <text x="86" y="315" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">takes 40% of calls, the bar asked for 70%</text>
+  <path d="M28 348 H372" stroke="#11120f" stroke-opacity="0.25"/>
+  <text x="28" y="378" fill="#11120f" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">a verdict before you switch anything</text>
+  <text x="28" y="400" fill="#66665e" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">no API key needed for the demo</text>
+</svg>

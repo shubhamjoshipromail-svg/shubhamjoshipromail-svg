@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="400" height="420" role="img" aria-label="software-world-model: a benchmark that diffs the whole database after a computer-use agent runs, and reports success, collateral damage, irreversible changes and false completion. From Odoo 17 to 18, collateral damage rose from 15% to 21%.">
+  <rect width="400" height="420" fill="#f3f0e8"/>
+  <rect width="400" height="4" fill="#e44b27"/>
+  <text x="28" y="40" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.6">BENCHMARK · MIT</text>
+  <text x="28" y="76" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="27" font-weight="650" letter-spacing="-1">software-world-model</text>
+  <path d="M28 94 H372" stroke="#11120f"/>
+  <text x="28" y="124" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.2">DATABASE BEFORE</text>
+  <text x="200" y="124" fill="#66665e" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.2">AFTER THE AGENT</text>
+  <g font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5">
+    <rect x="28" y="136" width="148" height="32" fill="none" stroke="#11120f"/>
+    <text x="38" y="157" fill="#11120f">INV/42  ref: none</text>
+    <rect x="200" y="136" width="172" height="32" fill="#11120f"/>
+    <text x="210" y="157" fill="#f3f0e8">INV/42  ref: PO-7</text>
+    <rect x="28" y="176" width="148" height="32" fill="none" stroke="#11120f"/>
+    <text x="38" y="197" fill="#11120f">PAY/42  reconciled</text>
+    <rect x="200" y="176" width="172" height="32" fill="#e44b27"/>
+    <text x="210" y="197" fill="#f3f0e8">PAY/42  unreconciled</text>
+    <rect x="28" y="216" width="148" height="32" fill="none" stroke="#11120f"/>
+    <text x="38" y="237" fill="#11120f">60 clients</text>
+    <rect x="200" y="216" width="172" height="32" fill="none" stroke="#11120f"/>
+    <text x="210" y="237" fill="#11120f">60 clients</text>
+  </g>
+  <path d="M180 152 H194 M188 147 L195 152 L188 157 M180 192 H194 M188 187 L195 192 L188 197" fill="none" stroke="#11120f" stroke-width="1.5"/>
+  <text x="200" y="270" fill="#11120f" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">asked for</text>
+  <text x="278" y="270" fill="#e44b27" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="650">not asked for</text>
+  <g font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5">
+    <rect x="28" y="296" width="70" height="28" fill="#11120f"/><text x="63" y="314" text-anchor="middle" fill="#f3f0e8">success</text>
+    <rect x="104" y="296" width="82" height="28" fill="#e44b27"/><text x="145" y="314" text-anchor="middle" fill="#f3f0e8">collateral</text>
+    <rect x="192" y="296" width="96" height="28" fill="none" stroke="#e44b27" stroke-width="1.5"/><text x="240" y="314" text-anchor="middle" fill="#e44b27">irreversible</text>
+    <rect x="294" y="296" width="78" height="28" fill="none" stroke="#66665e"/><text x="333" y="314" text-anchor="middle" fill="#66665e">false done</text>
+  </g>
+  <path d="M28 348 H372" stroke="#11120f" stroke-opacity="0.25"/>
+  <text x="28" y="378" fill="#11120f" font-family="SF Mono, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">Odoo 17 → 18</text>
+  <text x="28" y="400" fill="#66665e" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">success 78% → 76%, collateral <tspan fill="#e44b27" font-weight="650">15% → 21%</tspan></text>
+</svg>
